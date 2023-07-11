@@ -1,3 +1,10 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  {
+    path: 'disabled-elements',
+    loadComponent: () =>
+      import('./disabled-elements/disabled-elements.component'),
+  },
+  { path: '', redirectTo: 'disabled-elements', pathMatch: 'full' },
+];

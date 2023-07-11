@@ -1,0 +1,6 @@
+.mat-mdc-raised-button:is(:disabled) {
+    color: aqua;
+}
+.mat-mdc-raised-button:not(:disabled) {
+    color: yellow;
+}
