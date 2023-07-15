@@ -1,0 +1,18 @@
+<input
+  matInput
+  [matDatepicker]="picker"
+  [(ngModel)]="date"
+  #dateInput="ngModel"
+/>
+
+<mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+<mat-datepicker
+  startView="multi-year"
+  #picker
+  (monthSelected)="doSomething($event, picker, dateInput)"
+></mat-datepicker>
+
+<h2>Show the MAT_DATE_FORMATS</h2>
+<pre>
+  {{ format | json }}
+</pre>

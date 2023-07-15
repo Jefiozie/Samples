@@ -33,3 +33,11 @@
   <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
   <mat-datepicker authorizeOnly [roles]="roles" #picker></mat-datepicker>
 </section>
+<section style="height: 150px">
+  <h2>Is disabled with directive and roles</h2>
+  <div authorizeOnly [roles]="roles">
+    <label for="check">Check</label>
+    <input type="checkbox" name="check"  />
+    <!-- <input type="checkbox" name="check" authorizeOnly [roles]="roles" /> -->
+  </div>
+</section>

@@ -6,5 +6,9 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./disabled-elements/disabled-elements.component'),
   },
+  {
+    path: 'date',
+    loadComponent: () => import('./date-config/date-config.component'),
+  },
   { path: '', redirectTo: 'disabled-elements', pathMatch: 'full' },
 ];
