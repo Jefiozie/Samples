@@ -1,0 +1,61 @@
+<ng-container *ngIf="model$ | async as model">
+  <form
+    validationId="sample-data"
+    (ngSubmit)="onSubmit($any(form))"
+    #form="ngForm"
+  >
+    <fieldset>
+      <label for="name">
+        <span>Your name</span>
+      </label>
+      <input
+        type="text"
+        name="name"
+        placeholder="Fill in your name"
+        [(ngModel)]="model.name"
+        #name="ngModel"
+      />
+    </fieldset>
+    <fieldset>
+      <label for="email">
+        <span>Your email</span>
+      </label>
+      <input
+        type="email"
+        name="email"
+        placeholder="Fill in your email"
+        [(ngModel)]="model.email"
+        #email="ngModel"
+      />
+    </fieldset>
+
+    <fieldset>
+      <label for="sendEmail">
+        <span>sendEmail</span>
+      </label>
+      <input
+        type="checkbox"
+        name="sendEmail"
+        [(ngModel)]="model.sendEmail"
+        #sendEmail="ngModel"
+      />
+    </fieldset>
+
+    <input type="submit" value="Submit" />
+    <!-- <input type="submit" value="Submit" [disabled]="form.invalid" /> -->
+  </form>
+  <fieldset>
+    <label for=""> Name errors:</label>
+    <pre>
+      {{ name.errors | json }}
+    </pre>
+    <label for=""> email errors:</label>
+    <pre>
+      {{ email.errors | json }}
+    </pre>
+    <label for=""> sendEmail errors:</label>
+    <pre>
+      {{ sendEmail.errors | json }}
+    </pre>
+  </fieldset>
+</ng-container>

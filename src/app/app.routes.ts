@@ -10,5 +10,9 @@ export const routes: Routes = [
     path: 'date',
     loadComponent: () => import('./date-config/date-config.component'),
   },
+  {
+    path: 'form',
+    loadComponent: () => import('./form/form.component'),
+  },
   { path: '', redirectTo: 'disabled-elements', pathMatch: 'full' },
 ];
