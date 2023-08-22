@@ -14,5 +14,9 @@ export const routes: Routes = [
     path: 'form',
     loadComponent: () => import('./form/form.component'),
   },
+  {
+    path: 'm-form',
+    loadComponent: () => import('./form-material/form-material.component'),
+  },
   { path: '', redirectTo: 'disabled-elements', pathMatch: 'full' },
 ];
