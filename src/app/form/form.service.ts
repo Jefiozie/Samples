@@ -29,6 +29,9 @@ export class FormDataService {
 
 const suite = (data: Model = {} as Model, field: any) =>
   create(() => {
+    if (field !== undefined) {
+      console.error('field is not supported');
+    }
     test('name', 'Name is required', () => {
       enforce(data.name).isNotBlank();
     });

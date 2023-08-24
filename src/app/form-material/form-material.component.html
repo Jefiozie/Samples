@@ -1,8 +1,12 @@
+<button (click)="fieldValidation = !fieldValidation">
+  {{ fieldValidation ? "Disable" : "Enable" }} field validation
+</button>
 <ng-container *ngIf="model$ | async as model">
   <form
     validationId="sample-data"
     (ngSubmit)="onSubmit($any(form))"
     #form="ngForm"
+    [validateOnFieldChanges]="fieldValidation"
   >
     <mat-form-field>
       <mat-label>Name</mat-label>
@@ -15,15 +19,16 @@
         #name="ngModel"
       />
     </mat-form-field>
+
     <mat-form-field>
-      <mat-label>Email</mat-label>
+      <mat-label>Email - disabled ({{ model.sendEmail }})</mat-label>
       <input
         matInput
         type="email"
         name="email"
-        placeholder="Fill in your email"
         [(ngModel)]="model.email"
         #email="ngModel"
+        [disabled]="model.sendEmail"
       />
     </mat-form-field>
     <mat-label>sendEmail</mat-label>
@@ -49,7 +54,9 @@
     >
     <label for=""> sendEmail errors:</label>
     <pre>
-        {{ sendEmail.errors | json }}
-      </pre>
+      value: {{ model.sendEmail | json }}
+        errors: {{ sendEmail.errors | json }}
+      </pre
+    >
   </fieldset>
 </ng-container>

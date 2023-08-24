@@ -17,23 +17,25 @@ import { tap } from 'rxjs';
   standalone: true,
 })
 export class ValidationErrorHookUpDirective implements OnDestroy {
-  #elm = inject(ElementRef).nativeElement as HTMLInputElement;
+  // #elm = inject(ElementRef, { optional: true }).nativeElement as HTMLInputElement | null;
   #cdr = inject(ChangeDetectorRef);
   #model = inject(NgModel);
   lastState = '';
 
   #change = (status: string) => {
     const errors = this.#model.control.errors;
-    if (errors) {
-      Object.entries(errors).forEach(([key, value]) => {
-        const errMsg = Array.isArray(value) ? value.join('\n') : value;
-        this.#elm.setCustomValidity(errMsg);
-        this.#elm.title = errMsg;
-      });
-    } else {
-      this.#elm.setCustomValidity('');
-      this.#elm.title = '';
-    }
+    // if (errors) {
+
+    //   Object.entries(errors).forEach(([key, value]) => {
+    //     const errMsg = Array.isArray(value) ? value.join('\n') : value;
+    //     if(!this.#elm) return;
+    //     this.#elm?.setCustomValidity(errMsg);
+    //     this.#elm?.title = errMsg;
+    //   });
+    // } else {
+    //   this.#elm?.setCustomValidity('');
+    //   this.#elm?.title = '';
+    // }
     /**
      * Make sure the ui is updated,
      * but only when there is an invalid state!
