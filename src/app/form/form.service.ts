@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { ValidatorRegistryService, createVestAdapter } from '@validointi/core';
 import { Observable, delay, of } from 'rxjs';
-import { create, enforce, omitWhen, test } from 'vest';
+import { create, enforce, omitWhen, only, test } from 'vest';
 interface Model {
   name: string;
   sendEmail: boolean;
@@ -30,7 +30,8 @@ export class FormDataService {
 const suite = (data: Model = {} as Model, field: any) =>
   create(() => {
     if (field !== undefined) {
-      console.error('field is not supported');
+      console.error('field', field);
+      only(field);
     }
     test('name', 'Name is required', () => {
       enforce(data.name).isNotBlank();
