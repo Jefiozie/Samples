@@ -18,5 +18,9 @@ export const routes: Routes = [
     path: 'm-form',
     loadComponent: () => import('./form-material/form-material.component'),
   },
+  {
+    path: 'dialog',
+    loadComponent: () => import('./dialog-test/dialog-test.component'),
+  },
   { path: '', redirectTo: 'disabled-elements', pathMatch: 'full' },
 ];

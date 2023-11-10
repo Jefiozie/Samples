@@ -1,0 +1,68 @@
+my-dialog h1 {
+  align-self: flex-start;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #445262;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 1.3;
+}
+my-dialog .divider {
+  border-bottom: 0.25rem solid rgba(68, 82, 98, 0.5);
+  margin: 0.625rem 0 1.25rem;
+  visibility: ;
+}
+
+my-dialog footer {
+  background-color: #f8f8f8;
+  padding: 1.25rem 1.875rem;
+  margin: 2rem -1.875rem -1.875rem -1.875rem;
+  display: flex;
+  justify-content: flex-end;
+}
+my-dialog {
+  display:block;
+  padding: 1rem;
+}
+my-dialog .footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+my-dialog button {
+  background-color: #f8f8f8;
+  border-radius: 0.25rem;
+  border: 1px solid;
+  color: #445262;
+  cursor: pointer;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  display: inline;
+  line-height: 2;
+  height: 2.25rem;
+  padding: 0 2.1875rem;
+  border-color: #dadce3;
+  position: relative;
+}
+
+my-dialog select {
+  min-height: 3rem;
+  margin: 2rem 0;
+}
+my-dialog button[primary] {
+  border-radius: 0.25rem;
+  border: 1px solid;
+  cursor: pointer;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  display: inline;
+  line-height: 2;
+  height: 2.25rem;
+  padding: 0 2.1875rem;
+  background-color: #629afd;
+  border-color: #629afd;
+  color: white;
+  margin-right: 1rem;
+}
