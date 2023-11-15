@@ -5,6 +5,7 @@ export const routes: Routes = [
     path: 'disabled-elements',
     loadComponent: () =>
       import('./disabled-elements/disabled-elements.component'),
+    title: 'TITEL',
   },
   {
     path: 'date',
