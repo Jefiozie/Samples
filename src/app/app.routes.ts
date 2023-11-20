@@ -23,5 +23,9 @@ export const routes: Routes = [
     path: 'dialog',
     loadComponent: () => import('./dialog-test/dialog-test.component'),
   },
+  {
+    path: 'tableWithForm',
+    loadComponent: () => import('./table-with-form/table-with-form.component'),
+  },
   { path: '', redirectTo: 'disabled-elements', pathMatch: 'full' },
 ];

@@ -1,5 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
-/* @import "https://unpkg.com/open-props"; */
+/* the props */
+@import 'open-props/style';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* optional imports that use the props */
+@import 'open-props/normalize';
+@import 'open-props/buttons';
