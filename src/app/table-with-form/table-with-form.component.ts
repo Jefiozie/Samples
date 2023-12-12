@@ -39,9 +39,9 @@ export class DetailsComponent {
       </fieldset>
     </form>
     <h3>form values of a form array with template</h3>
-    <pre
+    <!-- <pre
       >{{ form?.form?.value | json }}
-    </pre
+    </pre -->
     >`,
 })
 export default class TableWithFormComponent {

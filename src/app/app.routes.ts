@@ -27,5 +27,9 @@ export const routes: Routes = [
     path: 'tableWithForm',
     loadComponent: () => import('./table-with-form/table-with-form.component'),
   },
+  {
+    path: 'routeInput/:id/:phone',
+    loadComponent: () => import('./router-input/router-input.component'),
+  },
   { path: '', redirectTo: 'disabled-elements', pathMatch: 'full' },
 ];
