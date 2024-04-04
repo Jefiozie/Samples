@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { DialogComponent } from './dialog.component';
 
 @Component({
   selector: 'app-dialog-test',
   standalone: true,
-  imports: [CommonModule, DialogComponent],
+  imports: [DialogComponent],
   templateUrl: './dialog-test.component.html',
   styleUrls: ['./dialog-test.component.css'],
 })

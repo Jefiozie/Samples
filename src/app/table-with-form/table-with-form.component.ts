@@ -1,4 +1,4 @@
-import { CommonModule, JsonPipe, NgFor } from '@angular/common';
+import { JsonPipe } from '@angular/common';
 import { Component, Input, ViewChild } from '@angular/core';
 import {
   ControlContainer,
@@ -10,7 +10,7 @@ import {
 @Component({
   selector: 'app-detail',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [FormsModule],
   template: `
     <label for="text">Text box</label>
     <input name="text" [(ngModel)]="item.text" type="text" />
@@ -28,21 +28,22 @@ export class DetailsComponent {
 @Component({
   selector: 'a',
   standalone: true,
-  imports: [NgFor, DetailsComponent, FormsModule, JsonPipe],
+  imports: [DetailsComponent, FormsModule, JsonPipe],
   template: ` <form>
-      <fieldset>
-        <app-detail
-          *ngFor="let item of items; let i = index"
-          [item]="item"
-          ngModelGroup="{{ 'array_' + i }}"
-        />
-      </fieldset>
-    </form>
-    <h3>form values of a form array with template</h3>
-    <!-- <pre
+        <fieldset>
+          @for (item of items; track item; let i = $index) {
+            <app-detail
+              [item]="item"
+              ngModelGroup="{{ 'array_' + i }}"
+              />
+          }
+        </fieldset>
+      </form>
+      <h3>form values of a form array with template</h3>
+      <!-- <pre
       >{{ form?.form?.value | json }}
-    </pre -->
-    >`,
+      </pre -->
+      >`,
 })
 export default class TableWithFormComponent {
   @ViewChild(NgForm) form!: NgForm;

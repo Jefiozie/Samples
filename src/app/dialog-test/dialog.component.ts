@@ -1,10 +1,10 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, ElementRef, Input, inject } from '@angular/core';
 
 @Component({
   selector: 'my-dialog',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   template: `<dialog>
     <ng-content></ng-content>
   </dialog>`,

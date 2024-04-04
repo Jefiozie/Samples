@@ -1,10 +1,10 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, ElementRef, OnDestroy, OnInit, inject } from '@angular/core';
 
 @Component({
   selector: 'app-resize',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './resize.component.html',
   styleUrls: ['./resize.component.css'],
 })
