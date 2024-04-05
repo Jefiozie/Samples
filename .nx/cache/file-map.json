@@ -56,7 +56,7 @@
       },
       {
         "file": ".gitignore",
-        "hash": "13044518069027839699"
+        "hash": "11928781573584795527"
       },
       {
         "file": ".vscode/extensions.json",
@@ -96,7 +96,7 @@
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "11380733681758805379"
+        "hash": "11740689254696955985"
       },
       {
         "file": "src/app/app.config.ts",
@@ -128,11 +128,11 @@
       },
       {
         "file": "src/app/dialog-test/dialog-test.component.ts",
-        "hash": "6083746249337040843"
+        "hash": "15110763810046959821"
       },
       {
         "file": "src/app/dialog-test/dialog.component.ts",
-        "hash": "7125893433182427643"
+        "hash": "6925589245877909995"
       },
       {
         "file": "src/app/disabled-elements/authorize/auth.service.ts",
@@ -152,7 +152,7 @@
       },
       {
         "file": "src/app/disabled-elements/disabled-elements.component.ts",
-        "hash": "12989537077552506533"
+        "hash": "748189768963603576"
       },
       {
         "file": "src/app/form-material/form-material.component.css",
@@ -160,7 +160,7 @@
       },
       {
         "file": "src/app/form-material/form-material.component.html",
-        "hash": "5797089951898700309"
+        "hash": "13158586827359943695"
       },
       {
         "file": "src/app/form-material/form-material.component.ts",
@@ -172,7 +172,7 @@
       },
       {
         "file": "src/app/form/form.component.html",
-        "hash": "16146716015057549130"
+        "hash": "15094780127336143400"
       },
       {
         "file": "src/app/form/form.component.ts",
@@ -196,7 +196,7 @@
       },
       {
         "file": "src/app/resize/resize.component.ts",
-        "hash": "6765294494773533914"
+        "hash": "6981152928652975913"
       },
       {
         "file": "src/app/router-input/router-input.component.css",
@@ -212,7 +212,7 @@
       },
       {
         "file": "src/app/router-input/router-input.component.ts",
-        "hash": "15318830396048074252"
+        "hash": "17175863509360393198"
       },
       {
         "file": "src/app/table-with-form/table-with-form.component.css",
@@ -220,7 +220,7 @@
       },
       {
         "file": "src/app/table-with-form/table-with-form.component.ts",
-        "hash": "9952923003950402798"
+        "hash": "16025912378097738704"
       },
       {
         "file": "src/assets/.gitkeep",
