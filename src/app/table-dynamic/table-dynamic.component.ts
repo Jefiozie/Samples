@@ -27,13 +27,17 @@ type TableOptions = keyof typeof tableOptions;
 export class DropdownWithPreSetComponent {
   data = input<abc>([]);
   title = input.required();
-  cmp = input.required<TableOptions>();
+  cmp = input.required<TableOptions | null>();
   $cmp = signal<Type<any> | null>(null);
 
   async handleClick() {
-    const tableCmp = tableOptions[this.cmp()];
-    const { default: cmp } = await tableCmp();
-    this.$cmp.set(cmp);
+    if (this.cmp()) {
+      const tableCmp = tableOptions[this.cmp()!];
+      const { default: cmp } = await tableCmp();
+      this.$cmp.set(cmp);
+    } else {
+      this.$cmp.set(null);
+    }
   }
 }
 
@@ -52,11 +56,13 @@ export class DropdownWithPreSetComponent {
 export default class TableDynamicComponent {
   dataService = inject(DataService);
   title = 'mooie knop';
-  $cmpToSelect = signal<TableOptions>('optionA');
+  $cmpToSelect = signal<TableOptions | null>('optionA');
   $isOpen = signal<boolean>(false);
   data: abc = this.dataService.users;
   switchTable() {
-    if (this.$cmpToSelect() === 'optionA') {
+    const localReference = this.$cmpToSelect();
+    this.$cmpToSelect.set(null);
+    if (localReference === 'optionA') {
       this.$cmpToSelect.set('optionB');
       return;
     }

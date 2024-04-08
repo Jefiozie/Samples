@@ -1,7 +1,10 @@
 import { JsonPipe } from '@angular/common';
-import { Component, computed, input } from '@angular/core';
-type abc = Array<any>;
-
+import { Component, InputSignal, Signal, computed, input } from '@angular/core';
+export interface TableData {
+  data: InputSignal<Array<any>>;
+  $headers: any;
+  $values: any;
+}
 @Component({
   imports: [JsonPipe],
   standalone: true,
@@ -28,8 +31,8 @@ type abc = Array<any>;
     text-align:center;
   }`,
 })
-export default class TableOneComponet {
-  data = input<abc>([]);
+export default class TableOneComponet implements TableData {
+  data = input<Array<any>>([]);
 
   $headers = computed(() =>
     this.data().length > 0 ? Object.keys(this.data()[0]) : []

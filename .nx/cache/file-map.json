@@ -27,6 +27,7 @@
     "@angular-eslint/template-parser": "17.3.0",
     "@angular/cli": "~17.3.3",
     "@angular/compiler-cli": "^17.3.3",
+    "@faker-js/faker": "^8.4.1",
     "@types/jasmine": "~4.3.0",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
@@ -56,7 +57,7 @@
       },
       {
         "file": ".gitignore",
-        "hash": "11928781573584795527"
+        "hash": "18113195880738417310"
       },
       {
         "file": ".vscode/extensions.json",
@@ -76,15 +77,15 @@
       },
       {
         "file": "angular.json",
-        "hash": "15612755802362121150"
+        "hash": "17711045194241225066"
       },
       {
         "file": "package-lock.json",
-        "hash": "8961702333412739991"
+        "hash": "17769680734238781857"
       },
       {
         "file": "package.json",
-        "hash": "9815077924463767578"
+        "hash": "13322491875640992512"
       },
       {
         "file": "src/app/app.component.css",
@@ -92,7 +93,7 @@
       },
       {
         "file": "src/app/app.component.html",
-        "hash": "6659611320933515801"
+        "hash": "18162660885590153554"
       },
       {
         "file": "src/app/app.component.ts",
@@ -104,7 +105,7 @@
       },
       {
         "file": "src/app/app.routes.ts",
-        "hash": "4906061367218022595"
+        "hash": "11486281612492956273"
       },
       {
         "file": "src/app/date-config/date-config.component.css",
@@ -116,7 +117,7 @@
       },
       {
         "file": "src/app/date-config/date-config.component.ts",
-        "hash": "14493230029306980632"
+        "hash": "10454292594611570250"
       },
       {
         "file": "src/app/dialog-test/dialog-test.component.css",
@@ -215,12 +216,32 @@
         "hash": "17175863509360393198"
       },
       {
+        "file": "src/app/shared/data.service.ts",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/table-dynamic/table-dynamic.component.ts",
+        "hash": "13502797914445532975"
+      },
+      {
+        "file": "src/app/table-dynamic/table-one.component.ts",
+        "hash": "7012338796646404603"
+      },
+      {
+        "file": "src/app/table-dynamic/table-two.component.ts",
+        "hash": "17529835066521385812"
+      },
+      {
         "file": "src/app/table-with-form/table-with-form.component.css",
         "hash": "4608333593883474180"
       },
       {
         "file": "src/app/table-with-form/table-with-form.component.ts",
         "hash": "16025912378097738704"
+      },
+      {
+        "file": "src/app/table/table.component.ts",
+        "hash": "14958756760712153904"
       },
       {
         "file": "src/assets/.gitkeep",
@@ -248,7 +269,7 @@
       },
       {
         "file": "tsconfig.json",
-        "hash": "1047940026627514556"
+        "hash": "11218648299551297010"
       },
       {
         "file": "tsconfig.spec.json",

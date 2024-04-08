@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, input, InputSignal, Signal } from '@angular/core';
+import { TableData } from './table-one.component';
+import { SignalGetter } from '@angular/core/primitives/signals';
 
 @Component({
   template: ` <table>
@@ -21,4 +23,9 @@ import { Component } from '@angular/core';
     </tbody>
   </table>`,
 })
-export default class TableTwoComponet {}
+export default class TableTwoComponet implements TableData {
+  data = input<Array<any>>([]);
+
+  $headers!: any;
+  $values!: any;
+}

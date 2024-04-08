@@ -2223,6 +2223,15 @@
         "hash": "sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g=="
       }
     },
+    "npm:@faker-js/faker": {
+      "type": "npm",
+      "name": "npm:@faker-js/faker",
+      "data": {
+        "version": "8.4.1",
+        "packageName": "@faker-js/faker",
+        "hash": "sha512-XQ3cU+Q8Uqmrbf2e0cIC/QN43sTBSC8KF12u29Mb47tWrt2hAgBXSgpZMj4Ao8Uk0iJcU99QsOCaIL8934obCg=="
+      }
+    },
     "npm:@humanwhocodes/config-array": {
       "type": "npm",
       "name": "npm:@humanwhocodes/config-array",
