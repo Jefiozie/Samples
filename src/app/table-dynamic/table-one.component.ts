@@ -1,0 +1,44 @@
+import { JsonPipe } from '@angular/common';
+import { Component, computed, input } from '@angular/core';
+type abc = Array<any>;
+
+@Component({
+  imports: [JsonPipe],
+  standalone: true,
+  template: `
+    <table>
+      <thead>
+        @for(header of $headers(); track $index){
+        <th>{{ header }}</th>
+        }
+      </thead>
+      <tbody>
+        <tr>
+          @for(value of $values(); track $index){
+          <td>{{ value }}</td>
+
+          }
+        </tr>
+      </tbody>
+    </table>
+  `,
+  styles: `
+  td{ 
+    word-wrap: break-word;
+    text-align:center;
+  }`,
+})
+export default class TableOneComponet {
+  data = input<abc>([]);
+
+  $headers = computed(() =>
+    this.data().length > 0 ? Object.keys(this.data()[0]) : []
+  );
+  $values = computed(() =>
+    this.$headers().length > 0
+      ? this.$headers().map((item: string) => {
+          return this.data().map((row) => row[item]);
+        })
+      : []
+  );
+}

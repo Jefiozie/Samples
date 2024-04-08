@@ -6,10 +6,9 @@ import {
   MatDatepicker,
   MatDatepickerModule,
 } from '@angular/material/datepicker';
-import * as _moment from 'moment';
+// import * as moment from 'moment';
 // tslint:disable-next-line:no-duplicate-imports
 import { Moment } from 'moment';
-const moment = _moment;
 export const MY_FORMATS = {
   parse: {
     dateInput: 'MM/YYYY',
@@ -52,7 +51,8 @@ export const dateP = () => [...pro];
   ],
 })
 export default class DateConfigComponent<D> {
-  date = moment();
+  date = new Date()
+  // date = moment();
   format = inject(MAT_DATE_FORMATS)
   doSomething(
     normalizedMonthAndYear: Moment,

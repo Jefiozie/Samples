@@ -31,5 +31,13 @@ export const routes: Routes = [
     path: 'routeInput/:id/:phone',
     loadComponent: () => import('./router-input/router-input.component'),
   },
+  {
+    path: 'table',
+    loadComponent: () => import('./table/table.component'),
+  },
+  {
+    path: 'table-dynamic',
+    loadComponent: () => import('./table-dynamic/table-dynamic.component'),
+  },
   { path: '', redirectTo: 'disabled-elements', pathMatch: 'full' },
 ];
