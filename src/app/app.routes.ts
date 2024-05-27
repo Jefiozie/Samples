@@ -39,5 +39,9 @@ export const routes: Routes = [
     path: 'table-dynamic',
     loadComponent: () => import('./table-dynamic/table-dynamic.component'),
   },
+  {
+    path: 'control',
+    loadComponent: () => import('./control/route.component'),
+  },
   { path: '', redirectTo: 'disabled-elements', pathMatch: 'full' },
 ];
