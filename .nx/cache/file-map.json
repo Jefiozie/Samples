@@ -57,7 +57,7 @@
       },
       {
         "file": ".gitignore",
-        "hash": "18113195880738417310"
+        "hash": "13487389229517884246"
       },
       {
         "file": ".vscode/extensions.json",
@@ -93,7 +93,7 @@
       },
       {
         "file": "src/app/app.component.html",
-        "hash": "18162660885590153554"
+        "hash": "3765793230374310896"
       },
       {
         "file": "src/app/app.component.ts",
@@ -105,7 +105,19 @@
       },
       {
         "file": "src/app/app.routes.ts",
-        "hash": "11486281612492956273"
+        "hash": "7632406262994448896"
+      },
+      {
+        "file": "src/app/control/form-field-control.component.ts",
+        "hash": "144432561459810842"
+      },
+      {
+        "file": "src/app/control/input-control.component.ts",
+        "hash": "15521708898753340718"
+      },
+      {
+        "file": "src/app/control/route.component.ts",
+        "hash": "9214665877939756903"
       },
       {
         "file": "src/app/date-config/date-config.component.css",
@@ -217,19 +229,19 @@
       },
       {
         "file": "src/app/shared/data.service.ts",
-        "hash": "3244421341483603138"
+        "hash": "10910745831462394435"
       },
       {
         "file": "src/app/table-dynamic/table-dynamic.component.ts",
-        "hash": "13502797914445532975"
+        "hash": "12434887049340138901"
       },
       {
         "file": "src/app/table-dynamic/table-one.component.ts",
-        "hash": "7012338796646404603"
+        "hash": "17649022607242112352"
       },
       {
         "file": "src/app/table-dynamic/table-two.component.ts",
-        "hash": "17529835066521385812"
+        "hash": "8630813267298789284"
       },
       {
         "file": "src/app/table-with-form/table-with-form.component.css",

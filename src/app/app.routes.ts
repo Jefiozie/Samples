@@ -43,5 +43,9 @@ export const routes: Routes = [
     path: 'control',
     loadComponent: () => import('./control/route.component'),
   },
+  {
+    path: 'mat-table',
+    loadComponent: () => import('./mat-table/mat-table.component'),
+  },
   { path: '', redirectTo: 'disabled-elements', pathMatch: 'full' },
 ];
