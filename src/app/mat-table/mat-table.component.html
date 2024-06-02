@@ -30,7 +30,6 @@
   <tr
     mat-row
     *matRowDef="let row; columns: displayedColumns"
-    (click)="onRowClick(row)"
     [class.row-is-clicked]="selectedRow() === row"
   ></tr>
 </table>

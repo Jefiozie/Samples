@@ -5,25 +5,25 @@ import {
   Directive,
   afterRender,
   contentChildren,
+  inject,
   signal,
   viewChildren,
 } from '@angular/core';
 import { MatRowDef, MatTableModule } from '@angular/material/table';
 
 @Directive({
-  selector: `[mat-table]`,
+  selector: `[mat-row]`,
+  host: {
+    '(click)': 'this.onClick(this)',
+  },
   standalone: true,
 })
 export class ADirective {
-  rows = viewChildren(CdkRow);
-  c_rows = contentChildren(CdkRow);
-  def = contentChildren(MatRowDef);
-  constructor() {
-    console.log('s', this.rows(), this.c_rows(), this.def());
-
-    afterRender(() => {
-      console.log('after', this.rows(), this.c_rows(), this.def());
-    });
+  table = inject(MatTableComponent);
+  rowDef = inject(MatRowDef);
+  onClick(row: any) {
+    // this is never the ROW from the template
+    this.table.selectedRow.set(row as unknown as PeriodicElement);
   }
 }
 
@@ -40,9 +40,9 @@ export class MatTableComponent {
 
   selectedRow = signal<PeriodicElement | null>(null);
 
-  onRowClick(row: PeriodicElement) {
-    this.selectedRow.set(row);
-  }
+  // onRowClick(row: PeriodicElement) {
+  //   this.selectedRow.set(row);
+  // }
 }
 
 export interface PeriodicElement {
