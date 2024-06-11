@@ -47,5 +47,9 @@ export const routes: Routes = [
     path: 'mat-table',
     loadComponent: () => import('./mat-table/mat-table.component'),
   },
+  {
+    path: 'multi-route',
+    loadChildren: () => import('./routeOutlet/default.component'),
+  },
   { path: '', redirectTo: 'disabled-elements', pathMatch: 'full' },
 ];
