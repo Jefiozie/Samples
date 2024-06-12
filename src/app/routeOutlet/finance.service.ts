@@ -11,7 +11,7 @@ export class FinanceService {
   private $list = signal([] as FinanceRecord[]);
   list = this.$list.asReadonly();
   constructor() {
-    this.generateFinance(10);
+    this.generateFinance(100);
   }
   async generateFinance(amount: number) {
     const list = new Array<FinanceRecord>();
@@ -29,6 +29,9 @@ export class FinanceService {
   }
 
   getAll = () => this.list;
-  getById = (id: number | string) =>
-    this.list().filter((item) => item.accountNumber === id.toString());
+  getById = (id: number | string) => {
+    return this.list().filter(
+      (item) => item.accountNumber.toString() == id.toString()
+    );
+  };
 }

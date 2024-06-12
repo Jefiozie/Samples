@@ -51,5 +51,14 @@ export const routes: Routes = [
     path: 'multi-route',
     loadChildren: () => import('./routeOutlet/default.component'),
   },
+  {
+    path: 'tabss',
+    loadComponent: () =>
+      import('./multi-tabs-windows/multi-tabs-windows.component'),
+  },
+  {
+    path: 'invoice',
+    loadComponent: () => import('./multi-tabs-windows/invoice.component'),
+  },
   { path: '', redirectTo: 'disabled-elements', pathMatch: 'full' },
 ];
