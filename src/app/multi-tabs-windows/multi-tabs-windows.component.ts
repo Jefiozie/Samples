@@ -5,13 +5,13 @@ import InvoiceComponent from './invoice.component';
 @Component({
   selector: 'app-multi-tabs-windows',
   standalone: true,
-  imports: [JsonPipe, AsyncPipe],
+  imports: [JsonPipe, AsyncPipe, InvoiceComponent],
   templateUrl: './multi-tabs-windows.component.html',
   styleUrl: './multi-tabs-windows.component.css',
 })
 export default class MultiTabsWindowsComponent {
   i = 1;
-  c = createBroadCastChannel('invoice?');
+  c = createBroadCastChannel(`invoice?`);
   sendMessage() {
     this.c.sendMessage(`${this.i++}`);
   }

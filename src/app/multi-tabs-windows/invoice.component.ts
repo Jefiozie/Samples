@@ -15,7 +15,6 @@ import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 
     @if($link()){
     <ngx-extended-pdf-viewer [src]="$link()"> </ngx-extended-pdf-viewer>
-    <!-- <a [href]="$link()">pdf link</a> -->
     } } @else {
     <h2>nothing posted in the message</h2>
     }
