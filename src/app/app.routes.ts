@@ -60,5 +60,9 @@ export const routes: Routes = [
     path: 'invoice',
     loadComponent: () => import('./multi-tabs-windows/invoice.component'),
   },
+  {
+    path: 'react',
+    loadComponent: () => import('./react/posts.component'),
+  },
   { path: '', redirectTo: 'disabled-elements', pathMatch: 'full' },
 ];
