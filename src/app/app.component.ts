@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { SentenceCasePipe } from './pipes/sentenceCase.pipes';
+import { routes } from './app.routes';
 
 @Component({
   selector: 'app-root',
@@ -12,4 +13,5 @@ import { SentenceCasePipe } from './pipes/sentenceCase.pipes';
 })
 export class AppComponent {
   title = 'standalone-app';
+  routes = routes;
 }

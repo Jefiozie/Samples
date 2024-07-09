@@ -1,20 +1,7 @@
 <nav>
-  <a routerLink="/disabled-elements">disabled-elements</a>
-  <a routerLink="/date">Date</a>
-  <a routerLink="/form">form</a>
-  <a routerLink="/m-form">Material Form</a>
-  <a routerLink="/dialog">Dialog</a>
-  <a routerLink="/tableWithForm">tableWithForm</a>
-  <a routerLink="/routeInput">routeInput plain</a>
-  <a routerLink="/routeInput">routeInput</a>
-  <a routerLink="/table">table</a>
-  <a routerLink="/table-dynamic">table-dynamic</a>
-  <a routerLink="/control">control</a>
-  <a routerLink="/mat-table">mat-table</a>
-  <a routerLink="/multi-route">multiRoute</a>
-  <a routerLink="/multi-window">multiwindow</a>
-  <a routerLink="/tabss">tabss</a>
-  <a routerLink="/react">react</a>
+  @for (item of routes; track $index) {
+  <a [routerLink]="item.path">{{ item.path }}</a
+  >}
 </nav>
 <section>
   <router-outlet></router-outlet>

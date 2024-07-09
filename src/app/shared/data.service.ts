@@ -19,4 +19,8 @@ export class DataService {
       registeredAt: faker.date.past(),
     };
   }
+
+  getById = (id: string) => {
+    return this.users.find((user) => user.userId === id);
+  };
 }

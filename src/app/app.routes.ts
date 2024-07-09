@@ -64,5 +64,9 @@ export const routes: Routes = [
     path: 'react',
     loadComponent: () => import('./react/posts.component'),
   },
+  {
+    path: 'filter',
+    loadComponent: () => import('./filter-form/filter-form.component'),
+  },
   { path: '', redirectTo: 'disabled-elements', pathMatch: 'full' },
 ];
