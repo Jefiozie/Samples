@@ -7,6 +7,7 @@ import { DataService } from '../shared/data.service';
   standalone: true,
   imports: [DatePipe, JsonPipe],
   template: `
+      @let users = user();
     <details>
       <fieldset>
         <label for="userName">ID</label>
@@ -14,7 +15,7 @@ import { DataService } from '../shared/data.service';
           type="text"
           id="userName"
           name="userName"
-          [value]="user()?.userId"
+          [value]="users.userId"
           disabled
         />
       </fieldset>
@@ -24,7 +25,7 @@ import { DataService } from '../shared/data.service';
           type="text"
           id="userName"
           name="userName"
-          [value]="user()?.username"
+          [value]="users.username"
           disabled
         />
       </fieldset>
@@ -34,7 +35,7 @@ import { DataService } from '../shared/data.service';
           type="text"
           id="userName"
           name="userName"
-          [value]="user()?.birthdate | date : 'yyyy-MM-dd'"
+          [value]="users.birthdate | date : 'yyyy-MM-dd'"
           disabled
         />
       </fieldset>
