@@ -1,5 +1,7 @@
 import { DatePipe, JsonPipe } from '@angular/common';
-import { Component, computed, inject, input } from '@angular/core';
+import { Component, inject, input, Signal } from '@angular/core';
+import { toObservable, toSignal } from '@angular/core/rxjs-interop';
+import { isObservable, Observable, of, switchMap } from 'rxjs';
 import { DataService } from '../shared/data.service';
 
 @Component({
@@ -7,7 +9,8 @@ import { DataService } from '../shared/data.service';
   standalone: true,
   imports: [DatePipe, JsonPipe],
   template: `
-      @let users = user();
+    @if(user()){ @let users = user();
+
     <details>
       <fieldset>
         <label for="userName">ID</label>
@@ -40,11 +43,34 @@ import { DataService } from '../shared/data.service';
         />
       </fieldset>
     </details>
+    }
   `,
 })
 export default class DetailComponent {
   service = inject(DataService);
   userId = input.required<string>();
 
-  user = computed(() => this.service.getById(this.userId()) ?? '');
+  user = computedObservable(this.userId, (userId) => {
+    console.log(userId);
+    return this.service.getById(userId);
+  });
+}
+
+export function computedObservable<T, O>(
+  source: Signal<T>,
+  project: (value: T) => O | Observable<O>
+): Signal<O | undefined> {
+  return toSignal(
+    toObservable(source).pipe(
+      switchMap((input) => {
+        const value$ = project(input);
+
+        if (!isObservable(value$)) {
+          return of(value$);
+        }
+
+        return value$;
+      })
+    )
+  );
 }

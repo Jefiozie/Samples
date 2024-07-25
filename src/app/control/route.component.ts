@@ -1,5 +1,5 @@
 import { JsonPipe } from '@angular/common';
-import { Component, viewChild } from '@angular/core';
+import { Component, viewChild, AfterViewInit } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { InputComponent } from './input-control.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -27,7 +27,7 @@ import { FormFieldComponent } from './form-field-control.component';
     </mat-form-field>
   `,
 })
-export default class RouteComponent {
+export default class RouteComponent implements AfterViewInit {
   control = 'waarde';
   form = viewChild(NgForm);
 

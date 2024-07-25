@@ -38,10 +38,7 @@
                 "output": "/assets/"
               }
             ],
-            "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
-            ],
+            "styles": ["src/styles.css", "src/m3-theme.scss"],
             "scripts": [],
             "browser": "src/main.ts"
           },
@@ -67,7 +64,6 @@
               "sourceMap": true,
               "namedChunks": true,
               "outputHashing": "none"
-
             }
           },
           "defaultConfiguration": "development"

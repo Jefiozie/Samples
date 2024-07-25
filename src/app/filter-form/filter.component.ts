@@ -1,11 +1,21 @@
 import { DatePipe } from '@angular/common';
-import { Component, model } from '@angular/core';
+import { Component, model, signal, viewChild } from '@angular/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelect, MatSelectModule } from '@angular/material/select';
 
 @Component({
   selector: 'filter',
   standalone: true,
-  imports: [DatePipe],
+  imports: [DatePipe, MatSelectModule, MatFormFieldModule],
   template: `
+    <fieldset>
+      <mat-form-field>
+      <mat-select placeholder="Please click a selection" (value)="id()">
+        <mat-option> none </mat-option>
+        <mat-option value="1"> 1 </mat-option>
+      </mat-select>
+      </mat-form-field>
+    </fieldset>
     <fieldset>
       <legend>Fill in a name of a user</legend>
       <input
@@ -31,4 +41,12 @@ import { Component, model } from '@angular/core';
 export default class FilterComponent {
   birthDate = model.required<Date | undefined>();
   userName = model.required<string>();
+  id = signal('');
+  matSelect = viewChild.required(MatSelect);
+
+  constructor() {
+    // effect(() => {
+    //   this.id.set(this.matSelect().value);
+    // });
+  }
 }

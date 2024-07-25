@@ -68,5 +68,9 @@ export const routes: Routes = [
     path: 'filter',
     loadComponent: () => import('./filter-form/filter-form.component'),
   },
+  {
+    path: 'data-selection',
+    loadComponent: () => import('./data-selection/data-selection.component'),
+  },
   { path: '', redirectTo: 'disabled-elements', pathMatch: 'full' },
 ];
