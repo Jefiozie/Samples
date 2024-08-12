@@ -1,0 +1,19 @@
+button:first-child {
+  background: #d40047;
+}
+::backdrop {
+  background: rgba(0, 0, 0, 0.32);
+}
+[popover] button {
+  color: white;
+  background-color: #222;
+  border-color: #333;
+  box-shadow: 1px 1px 10px #0002;
+  border-radius: 4px;
+  width: 180px;
+  padding: 1em 1em 1.3em;
+}
+
+[popover]::backdrop {
+  backdrop-filter: blur(1.5px);
+}

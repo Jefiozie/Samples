@@ -72,5 +72,9 @@ export const routes: Routes = [
     path: 'data-selection',
     loadComponent: () => import('./data-selection/data-selection.component'),
   },
+  {
+    path: 'popover-example',
+    loadComponent: () => import('./popover-example/popover-example.component'),
+  },
   { path: '', redirectTo: 'disabled-elements', pathMatch: 'full' },
 ];
