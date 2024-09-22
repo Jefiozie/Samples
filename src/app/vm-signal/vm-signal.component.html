@@ -1,0 +1,36 @@
+<title>Lists</title>
+@let beData = $beData();
+<details>
+  <input
+    type="text"
+    [value]="$filter()"
+    (input)="$filter.set({ search: $any($event.target).value })"
+  />
+  <summary>Without vm signal</summary>
+  <ol>
+    @for (item of beData.data; track $index) {
+    <li>{{ item }}</li>
+    }
+  </ol>
+</details>
+<code>
+  {{ $filter() | json }}
+</code>
+<details>
+  <input
+    type="text"
+    [value]="$inputValue()"
+    (input)="$inputValue.set($any($event.target).value)"
+  />
+  <summary>With vm signal</summary>
+  <ol>
+    @for (item of beData.data; track $index) {
+    <li>{{ item }}</li>
+    }
+  </ol>
+</details>
+
+<code>
+  {{ $inputValue() | json }}
+  {{ $vm() | json }}
+</code>

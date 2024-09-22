@@ -76,5 +76,12 @@ export const routes: Routes = [
     path: 'popover-example',
     loadComponent: () => import('./popover-example/popover-example.component'),
   },
+  {
+    path: 'vmSignals',
+    loadComponent: () =>
+      import('./vm-signal/vm-signal.component').then(
+        (c) => c.VmSignalComponent
+      ),
+  },
   { path: '', redirectTo: 'disabled-elements', pathMatch: 'full' },
 ];
