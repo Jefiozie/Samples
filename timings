@@ -1,0 +1,75 @@
+
+Linting "standalone-app"...
+
+/home/jbosch/code/private/Samples/src/app/control/form-field-control.component.ts
+  248:36  error  Don't use `{}` as a type. `{}` actually means "any non-nullish value".
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead.
+- If you want a type meaning "empty object", you probably want `Record<string, never>` instead.
+- If you really want a type meaning "any non-nullish value", you probably want `NonNullable<unknown>` instead  @typescript-eslint/ban-types
+
+/home/jbosch/code/private/Samples/src/app/control/input-control.component.ts
+  74:36  error  Don't use `{}` as a type. `{}` actually means "any non-nullish value".
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead.
+- If you want a type meaning "empty object", you probably want `Record<string, never>` instead.
+- If you really want a type meaning "any non-nullish value", you probably want `NonNullable<unknown>` instead  @typescript-eslint/ban-types
+
+/home/jbosch/code/private/Samples/src/app/date-config/date-config.component.ts
+  60:5  error  'dateInput' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/jbosch/code/private/Samples/src/app/form/form.component.ts
+   6:3   error  'ElementRef' is defined but never used       @typescript-eslint/no-unused-vars
+  26:11  error  'errors' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/home/jbosch/code/private/Samples/src/app/form/form.service.ts
+  24:24  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  30:50  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/jbosch/code/private/Samples/src/app/mat-table/mat-table.component.ts
+   1:10  error  'CdkRow' is defined but never used           @typescript-eslint/no-unused-vars
+   6:3   error  'afterRender' is defined but never used      @typescript-eslint/no-unused-vars
+   7:3   error  'contentChildren' is defined but never used  @typescript-eslint/no-unused-vars
+  10:3   error  'viewChildren' is defined but never used     @typescript-eslint/no-unused-vars
+  24:16  error  Unexpected any. Specify a different type     @typescript-eslint/no-explicit-any
+
+/home/jbosch/code/private/Samples/src/app/popover-example/popover-example.component.ts
+  1:21  error  'ViewEncapsulation' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/jbosch/code/private/Samples/src/app/react/post.component.ts
+  15:5  error  click must be accompanied by either keyup, keydown or keypress event for accessibility  @angular-eslint/template/click-events-have-key-events
+  15:5  error  Elements with interaction handlers must be focusable                                    @angular-eslint/template/interactive-supports-focus
+
+/home/jbosch/code/private/Samples/src/app/resize/resize.component.ts
+  35:16  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/jbosch/code/private/Samples/src/app/shared/data.service.ts
+   6:11  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  14:23  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/jbosch/code/private/Samples/src/app/table-dynamic/table-dynamic.component.ts
+  31:22  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/jbosch/code/private/Samples/src/app/table-dynamic/table-one.component.ts
+   2:34  error  'Signal' is defined but never used                                                                                      @typescript-eslint/no-unused-vars
+   4:27  error  Unexpected any. Specify a different type                                                                                @typescript-eslint/no-explicit-any
+   5:13  error  Unexpected any. Specify a different type                                                                                @typescript-eslint/no-explicit-any
+   6:12  error  Unexpected any. Specify a different type                                                                                @typescript-eslint/no-explicit-any
+  34:22  error  Component class names should end with one of these suffixes: "Component" (https://angular.dev/style-guide#style-02-03)  @angular-eslint/component-class-suffix
+  35:22  error  Unexpected any. Specify a different type                                                                                @typescript-eslint/no-explicit-any
+
+/home/jbosch/code/private/Samples/src/app/table-dynamic/table-two.component.ts
+   1:28  error  'InputSignal' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+   1:41  error  'Signal' is defined but never used                                                                                      @typescript-eslint/no-unused-vars
+   3:10  error  'SignalGetter' is defined but never used                                                                                @typescript-eslint/no-unused-vars
+  26:22  error  Component class names should end with one of these suffixes: "Component" (https://angular.dev/style-guide#style-02-03)  @angular-eslint/component-class-suffix
+  27:22  error  Unexpected any. Specify a different type                                                                                @typescript-eslint/no-explicit-any
+  29:14  error  Unexpected any. Specify a different type                                                                                @typescript-eslint/no-explicit-any
+  30:13  error  Unexpected any. Specify a different type                                                                                @typescript-eslint/no-explicit-any
+
+/home/jbosch/code/private/Samples/src/app/table/table.component.ts
+   61:14  error  Directive class names should end with one of these suffixes: "Directive" (https://angular.dev/style-guide#style-02-03)  @angular-eslint/directive-class-suffix
+  108:18  error  Unexpected any. Specify a different type                                                                                @typescript-eslint/no-explicit-any
+
+✖ 34 problems (34 errors, 0 warnings)
+
