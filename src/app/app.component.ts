@@ -4,6 +4,13 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { routes } from './app.routes';
 import { SentenceCasePipe } from './pipes/sentenceCase.pipes';
 import { RenderComponentService } from './render-component.service';
+interface A {
+  component: Function
+}
+const x: A = {
+  component: () => import('./popover-example/popover-example.component');
+}
+
 
 @Component({
   selector: 'app-root',
@@ -19,8 +26,8 @@ export class AppComponent {
 
   async lazyRenderCmpClick() {
     const element = document.querySelector<HTMLElement>('#renderCmp')!;
-    const lazy = () => import('./popover-example/popover-example.component');
-    const { default: cmp } = await lazy();
+    const lazy = x.component;
+    const { default: cmp } = await x.component();
     this.rendercmpS.renderComponent(cmp, element);
   }
 }

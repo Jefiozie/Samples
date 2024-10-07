@@ -12,17 +12,18 @@ import {
 })
 export class RenderComponentService {
   private readonly environmentInjector = inject(EnvironmentInjector);
+  // root injector
   private readonly injector = inject(Injector);
 
   renderComponent<T>(cmp: Type<T>, hostElement: HTMLElement) {
     const componentRef = createComponent(cmp, {
+      hostElement,
       environmentInjector: this.environmentInjector,
       elementInjector: this.injector,
-      hostElement,
     });
 
     // if we need to set inputs?
-    // componentRef.setInput
+    componentRef.setInput('inputa', 'valueb')
 
     componentRef.changeDetectorRef.detectChanges();
 
