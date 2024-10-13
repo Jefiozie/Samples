@@ -5,12 +5,12 @@ import { routes } from './app.routes';
 import { SentenceCasePipe } from './pipes/sentenceCase.pipes';
 import { RenderComponentService } from './render-component.service';
 interface A {
-  component: Function
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  component: any;
 }
 const x: A = {
-  component: () => import('./popover-example/popover-example.component');
-}
-
+  component: () => import('./popover-example/popover-example.component'),
+};
 
 @Component({
   selector: 'app-root',

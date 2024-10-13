@@ -3,7 +3,7 @@ import { TableData } from './table-one.component';
 import { SignalGetter } from '@angular/core/primitives/signals';
 
 @Component({
-  template: ` <table>
+    template: ` <table>
     <thead>
       <th>G</th>
       <th>A</th>
@@ -22,6 +22,7 @@ import { SignalGetter } from '@angular/core/primitives/signals';
       </tr>
     </tbody>
   </table>`,
+    standalone: false
 })
 export default class TableTwoComponet implements TableData {
   data = input<Array<any>>([]);
