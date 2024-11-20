@@ -5,10 +5,9 @@ import { isObservable, Observable, of, switchMap } from 'rxjs';
 import { DataService } from '../shared/data.service';
 
 @Component({
-  selector: 'detail',
-  standalone: true,
-  imports: [DatePipe, JsonPipe],
-  template: `
+    selector: 'detail',
+    imports: [DatePipe, JsonPipe],
+    template: `
     @if(user()){ @let users = user();
 
     <details>
@@ -44,7 +43,7 @@ import { DataService } from '../shared/data.service';
       </fieldset>
     </details>
     }
-  `,
+  `
 })
 export default class DetailComponent {
   service = inject(DataService);

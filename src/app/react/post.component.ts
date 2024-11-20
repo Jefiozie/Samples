@@ -9,9 +9,8 @@ import { ReactComponentDirective } from './react.component.directive';
 type Post = { title: string; description: string; pictureLink: string };
 
 @Component({
-  standalone: true,
-  selector: 'app-post',
-  template: `
+    selector: 'app-post',
+    template: `
     <div
       appReactDirective
       [props]="post()"
@@ -19,9 +18,9 @@ type Post = { title: string; description: string; pictureLink: string };
       (click)="selectPost.emit()"
     ></div>
   `,
-  styles: [''],
-  imports: [ReactComponentDirective],
-  schemas: [NO_ERRORS_SCHEMA],
+    styles: [''],
+    imports: [ReactComponentDirective],
+    schemas: [NO_ERRORS_SCHEMA]
 })
 export class PostComponent {
   post = input<Post | undefined>(undefined);

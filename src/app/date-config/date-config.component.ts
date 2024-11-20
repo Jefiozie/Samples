@@ -31,24 +31,23 @@ export const pro = [
 export const dateP = () => [...pro];
 
 @Component({
-  selector: 'app-date-config',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatNativeDateModule,
-    MatDatepickerModule,
-    FormsModule,
-  ],
-  templateUrl: './date-config.component.html',
-  styleUrls: ['./date-config.component.css'],
-  providers: [
-    // we need to provide the datepicker with the current date format
-    // {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS},
-    // or we can use the dateP() function
-    // this is the same as using the pro array from app.config.ts
-    // the function approach is the newer way of doing it
-    dateP(),
-  ],
+    selector: 'app-date-config',
+    imports: [
+        CommonModule,
+        MatNativeDateModule,
+        MatDatepickerModule,
+        FormsModule,
+    ],
+    templateUrl: './date-config.component.html',
+    styleUrls: ['./date-config.component.css'],
+    providers: [
+        // we need to provide the datepicker with the current date format
+        // {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS},
+        // or we can use the dateP() function
+        // this is the same as using the pro array from app.config.ts
+        // the function approach is the newer way of doing it
+        dateP(),
+    ]
 })
 export default class DateConfigComponent<D> {
   date = new Date()

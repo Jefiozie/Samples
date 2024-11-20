@@ -4,10 +4,9 @@ import { PostComponent } from './post.component';
 type Post = { title: string; description: string };
 
 @Component({
-  standalone: true,
-  imports: [PostComponent],
-  selector: 'app-root',
-  template: `
+    imports: [PostComponent],
+    selector: 'app-root',
+    template: `
     <div class="flex flex-col gap-2 p-12">
       <div class="flex gap-2">
         @for (post of posts; track post.title) {
@@ -28,7 +27,7 @@ type Post = { title: string; description: string };
       </div>
     </div>
   `,
-  styles: [''],
+    styles: ['']
 })
 export default class AppComponent {
   readonly posts = [

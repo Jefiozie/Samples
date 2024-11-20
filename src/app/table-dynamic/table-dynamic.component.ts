@@ -10,10 +10,9 @@ const tableOptions = {
 
 type TableOptions = keyof typeof tableOptions;
 @Component({
-  selector: `app-dynamic-table`,
-  imports: [NgComponentOutlet],
-  standalone: true,
-  template: `
+    selector: `app-dynamic-table`,
+    imports: [NgComponentOutlet],
+    template: `
     <button type="button" (click)="handleClick()">
       {{ title() }}
     </button>
@@ -22,7 +21,7 @@ type TableOptions = keyof typeof tableOptions;
       *ngComponentOutlet="$cmp(); inputs: { data: data() }"
     ></ng-container>
     }
-  `,
+  `
 })
 export class DropdownWithPreSetComponent {
   data = input<abc>([]);
@@ -42,16 +41,15 @@ export class DropdownWithPreSetComponent {
 }
 
 @Component({
-  standalone: true,
-  imports: [DropdownWithPreSetComponent],
-  template: `
+    imports: [DropdownWithPreSetComponent],
+    template: `
     <section>Open? : {{ $isOpen() }}</section>
     <section>cmp : {{ $cmpToSelect() }}</section>
     <button (click)="switchTable()">Switch cmp</button>
     <section>
       <app-dynamic-table [title]="title" [cmp]="$cmpToSelect()" [data]="data" />
     </section>
-  `,
+  `
 })
 export default class TableDynamicComponent {
   dataService = inject(DataService);

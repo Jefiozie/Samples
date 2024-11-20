@@ -8,10 +8,9 @@ import {
 } from '@angular/forms';
 
 @Component({
-  selector: 'app-detail',
-  standalone: true,
-  imports: [FormsModule],
-  template: `
+    selector: 'app-detail',
+    imports: [FormsModule],
+    template: `
     <label for="text">Text box</label>
     <input name="text" [(ngModel)]="item.text" type="text" />
     <label for="first">Checkbox1</label>
@@ -19,17 +18,16 @@ import {
     <label for="second">Checkbox2</label>
     <input name="second" [(ngModel)]="item.second" type="checkbox" />
   `,
-  styleUrl: './table-with-form.component.css',
-  viewProviders: [{ provide: ControlContainer, useExisting: NgModelGroup }],
+    styleUrl: './table-with-form.component.css',
+    viewProviders: [{ provide: ControlContainer, useExisting: NgModelGroup }]
 })
 export class DetailsComponent {
   @Input() item!: { text: string; first: boolean; second: boolean };
 }
 @Component({
-  selector: 'a',
-  standalone: true,
-  imports: [DetailsComponent, FormsModule, JsonPipe],
-  template: ` <form>
+    selector: 'a',
+    imports: [DetailsComponent, FormsModule, JsonPipe],
+    template: ` <form>
         <fieldset>
           @for (item of items; track item; let i = $index) {
             <app-detail
@@ -43,7 +41,7 @@ export class DetailsComponent {
       <!-- <pre
       >{{ form?.form?.value | json }}
       </pre -->
-      >`,
+      >`
 })
 export default class TableWithFormComponent {
   @ViewChild(NgForm) form!: NgForm;

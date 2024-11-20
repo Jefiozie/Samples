@@ -9,19 +9,18 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { ValidationErrorHookUpDirective } from '../form/form.component';
 
 @Component({
-  selector: 'app-form-material',
-  standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatCheckboxModule,
-    vldntiDirectives,
-    ValidationErrorHookUpDirective
-  ],
-  templateUrl: './form-material.component.html',
-  styleUrls: ['./form-material.component.css'],
+    selector: 'app-form-material',
+    imports: [
+        CommonModule,
+        FormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatCheckboxModule,
+        vldntiDirectives,
+        ValidationErrorHookUpDirective
+    ],
+    templateUrl: './form-material.component.html',
+    styleUrls: ['./form-material.component.css']
 })
 export default class FormMaterialComponent {
   vmService = inject(FormDataService);

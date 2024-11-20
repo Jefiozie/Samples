@@ -15,10 +15,9 @@ import {
 type abc = Array<{ key: string; value: string }>;
 
 @Component({
-  selector: `app-thing-3`,
-  imports: [NgTemplateOutlet],
-  standalone: true,
-  template: `
+    selector: `app-thing-3`,
+    imports: [NgTemplateOutlet],
+    template: `
     <button type="button" (click)="showTable.set(!showTable())">
       {{ title() }}
     </button>
@@ -42,7 +41,7 @@ type abc = Array<{ key: string; value: string }>;
       </tbody>
     </table>
     }}
-  `,
+  `
 })
 export class V3ThingUiComponent {
   x = contentChild('thingX', { read: TemplateRef<Element> });
@@ -69,9 +68,8 @@ export class SelectionTr {
 }
 
 @Component({
-  standalone: true,
-  imports: [V3ThingUiComponent, SelectionTr],
-  template: `
+    imports: [V3ThingUiComponent, SelectionTr],
+    template: `
     <section>Open? : {{ isOpen() }}</section>
     <section hidden>
       <app-thing-3 [title]="title" [(showTable)]="isOpen"> </app-thing-3>
@@ -101,7 +99,7 @@ export class SelectionTr {
         </ng-template>
       </app-thing-3>
     </section>
-  `,
+  `
 })
 export default class ThingComponent {
   title = 'mooi';

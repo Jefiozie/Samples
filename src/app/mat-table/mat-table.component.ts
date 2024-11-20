@@ -28,11 +28,10 @@ export class ADirective {
 }
 
 @Component({
-  selector: 'app-mat-table',
-  standalone: true,
-  styleUrl: 'mat-table.component.css',
-  imports: [MatTableModule, ADirective],
-  templateUrl: './mat-table.component.html',
+    selector: 'app-mat-table',
+    styleUrl: 'mat-table.component.css',
+    imports: [MatTableModule, ADirective],
+    templateUrl: './mat-table.component.html'
 })
 export class MatTableComponent {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
@@ -66,12 +65,11 @@ const ELEMENT_DATA: PeriodicElement[] = [
 ];
 
 @Component({
-  standalone: true,
-  imports: [MatTableComponent, JsonPipe, ADirective],
-  template: `<h1>Table</h1>
+    imports: [MatTableComponent, JsonPipe, ADirective],
+    template: `<h1>Table</h1>
     <app-mat-table />
 
-    <code> {{ row() | json }}</code>`,
+    <code> {{ row() | json }}</code>`
 })
 // [(selectedRow)]="row"
 export default class MatTableDemoComponent {

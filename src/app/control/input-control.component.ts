@@ -77,11 +77,10 @@ export class NoopValueAccessorDirective implements ControlValueAccessor {
   registerOnTouched(fn: any): void {}
 }
 @Component({
-  selector: 'app-input',
-  standalone: true,
-  imports: [ReactiveFormsModule],
-  hostDirectives: [NoopValueAccessorDirective],
-  template: `<input type="text" [formControl]="ngControl!.control" />`
+    selector: 'app-input',
+    imports: [ReactiveFormsModule],
+    hostDirectives: [NoopValueAccessorDirective],
+    template: `<input type="text" [formControl]="ngControl!.control" />`
 })
 export class InputComponent {
   ngControl = injectNgControl();

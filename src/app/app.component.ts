@@ -14,12 +14,10 @@ const x: A = {
 };
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, RouterLink, SentenceCasePipe],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  // providers: [provideConfetti()],
+    selector: 'app-root',
+    imports: [RouterOutlet, RouterLink, SentenceCasePipe],
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'standalone-app';

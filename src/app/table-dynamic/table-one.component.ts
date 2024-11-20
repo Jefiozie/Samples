@@ -6,9 +6,8 @@ export interface TableData {
   $values: any;
 }
 @Component({
-  imports: [JsonPipe],
-  standalone: true,
-  template: `
+    imports: [JsonPipe],
+    template: `
     <table>
       <thead>
         @for(header of $headers(); track $index){
@@ -25,11 +24,11 @@ export interface TableData {
       </tbody>
     </table>
   `,
-  styles: `
+    styles: `
   td{ 
     word-wrap: break-word;
     text-align:center;
-  }`,
+  }`
 })
 export default class TableOneComponet implements TableData {
   data = input<Array<any>>([]);

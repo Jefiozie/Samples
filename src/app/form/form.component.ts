@@ -57,16 +57,15 @@ export class ValidationErrorHookUpDirective implements OnDestroy {
 }
 
 @Component({
-  selector: 'app-form',
-  standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    ValidatorDirective,
-    // ValidationErrorHookUpDirective,
-  ],
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css'],
+    selector: 'app-form',
+    imports: [
+        CommonModule,
+        FormsModule,
+        ValidatorDirective,
+        // ValidationErrorHookUpDirective,
+    ],
+    templateUrl: './form.component.html',
+    styleUrls: ['./form.component.css']
 })
 export default class FormComponent {
   vmService = inject(FormDataService);

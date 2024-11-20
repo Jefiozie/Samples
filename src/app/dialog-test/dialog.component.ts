@@ -2,14 +2,13 @@
 import { Component, ElementRef, Input, inject } from '@angular/core';
 
 @Component({
-  selector: 'my-dialog',
-  standalone: true,
-  imports: [],
-  template: `<dialog>
+    selector: 'my-dialog',
+    imports: [],
+    template: `<dialog>
     <ng-content></ng-content>
   </dialog>`,
-  styles: [
-    `
+    styles: [
+        `
       ::backdrop {
         /* background: rgba(0, 0, 0, 0.32);  */
       }
@@ -24,7 +23,7 @@ import { Component, ElementRef, Input, inject } from '@angular/core';
         min-width: 31.25rem;
       }
     `,
-  ],
+    ]
 })
 export class DialogComponent {
   _show = false;

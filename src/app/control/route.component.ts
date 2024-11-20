@@ -6,15 +6,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormFieldComponent } from './form-field-control.component';
 
 @Component({
-  imports: [
-    InputComponent,
-    FormsModule,
-    JsonPipe,
-    MatFormFieldModule,
-    FormFieldComponent,
-  ],
-  standalone: true,
-  template: `
+    imports: [
+        InputComponent,
+        FormsModule,
+        JsonPipe,
+        MatFormFieldModule,
+        FormFieldComponent,
+    ],
+    template: `
     <h1>plain</h1>
     <form>
       <app-input name="control" [(ngModel)]="control" />
@@ -25,7 +24,7 @@ import { FormFieldComponent } from './form-field-control.component';
     <mat-form-field>
       <app-form-input name="control" [(ngModel)]="control" />
     </mat-form-field>
-  `,
+  `
 })
 export default class RouteComponent implements AfterViewInit {
   control = 'waarde';

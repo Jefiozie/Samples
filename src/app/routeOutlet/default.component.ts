@@ -9,9 +9,8 @@ import { RouterLink, RouterOutlet, Routes } from '@angular/router';
 import { FinanceService } from './finance.service';
 
 @Component({
-  imports: [RouterOutlet, RouterLink],
-  standalone: true,
-  template: ` <h1>this is a router outlet of multiple things</h1>
+    imports: [RouterOutlet, RouterLink],
+    template: ` <h1>this is a router outlet of multiple things</h1>
     <ul>
       @for(item of a(); track $index){
       <li>
@@ -22,19 +21,18 @@ import { FinanceService } from './finance.service';
       }
     </ul>
     <router-outlet name="left" />
-    <router-outlet name="right" />`,
+    <router-outlet name="right" />`
 })
 class DefaultComponent {
   financeService = inject(FinanceService);
   a = this.financeService.getAll();
 }
 @Component({
-  imports: [RouterOutlet, JsonPipe],
-  standalone: true,
-  template: ` <h2>A component - {{ id() }}</h2>
+    imports: [RouterOutlet, JsonPipe],
+    template: ` <h2>A component - {{ id() }}</h2>
     <code>
       {{ $item() | json }}
-    </code>`,
+    </code>`
 })
 class AComponent {
   financeService = inject(FinanceService);
@@ -43,12 +41,11 @@ class AComponent {
   $item = computed(() => this.financeService.getById(this.id()));
 }
 @Component({
-  imports: [RouterOutlet, JsonPipe],
-  standalone: true,
-  template: ` <h2>B component - {{ id() }}</h2>
+    imports: [RouterOutlet, JsonPipe],
+    template: ` <h2>B component - {{ id() }}</h2>
     <code>
       {{ $item() | json }}
-    </code>`,
+    </code>`
 })
 class BComponent {
   financeService = inject(FinanceService);

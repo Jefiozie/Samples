@@ -4,10 +4,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelect, MatSelectModule } from '@angular/material/select';
 
 @Component({
-  selector: 'filter',
-  standalone: true,
-  imports: [DatePipe, MatSelectModule, MatFormFieldModule],
-  template: `
+    selector: 'filter',
+    imports: [DatePipe, MatSelectModule, MatFormFieldModule],
+    template: `
     <fieldset>
       <mat-form-field>
       <mat-select placeholder="Please click a selection" (value)="id()">
@@ -36,7 +35,7 @@ import { MatSelect, MatSelectModule } from '@angular/material/select';
         (input)="birthDate.set($any($event.target).valueAsDate)"
       />
     </fieldset>
-  `,
+  `
 })
 export default class FilterComponent {
   birthDate = model.required<Date | undefined>();

@@ -6,12 +6,10 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { AUTHORIZE_ONLY_DIRECTIVES } from './authorize/authorize-only.directive';
 import { CONFETTI_STANDALONE, provideConfetti } from '../utils/providerExample';
 @Component({
-  selector: 'app-disabled-elements',
-  standalone: true,
-  imports: [MatButtonModule, MatNativeDateModule, MatDatepickerModule, AUTHORIZE_ONLY_DIRECTIVES],
-  templateUrl: './disabled-elements.component.html',
-  styleUrls: ['./disabled-elements.component.css'],
-  // providers:[provideConfetti()]
+    selector: 'app-disabled-elements',
+    imports: [MatButtonModule, MatNativeDateModule, MatDatepickerModule, AUTHORIZE_ONLY_DIRECTIVES],
+    templateUrl: './disabled-elements.component.html',
+    styleUrls: ['./disabled-elements.component.css']
 })
 export default class DisabledElementsComponent {
   disabled = true;

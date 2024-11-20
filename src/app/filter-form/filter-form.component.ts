@@ -5,12 +5,11 @@ import FilterComponent from './filter.component';
 import DetailComponent from './filter-details.component';
 
 @Component({
-  selector: 'app-filter-form',
-  standalone: true,
-  imports: [JsonPipe, FilterComponent, DetailComponent],
-  template: `<p>filter-form works!</p>
+    selector: 'app-filter-form',
+    imports: [JsonPipe, FilterComponent, DetailComponent],
+    template: `<p>filter-form works!</p>
     <filter [(birthDate)]="birthDate" [(userName)]="userName" />
-    <detail [userId]="data()" /> `,
+    <detail [userId]="data()" /> `
 })
 export default class FilterFormComponent {
   #service = inject(DataService);

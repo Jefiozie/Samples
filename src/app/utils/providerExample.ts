@@ -2,10 +2,11 @@
 //
 
 import {
-  APP_INITIALIZER,
   InjectionToken,
   makeEnvironmentProviders,
   Provider,
+  provideAppInitializer,
+  EnvironmentProviders,
 } from '@angular/core';
 
 export const CONFETTI_STANDALONE = new InjectionToken<unknown>('jb-confetti');
@@ -18,11 +19,9 @@ export function provideConfetti() {
   return CONFETTI_PROVIDER_X;
 }
 
-export const CONFETTI_PROVIDER: Provider = {
-  provide: APP_INITIALIZER,
-  multi: true,
-  useFactory: loadScript,
-};
+export const CONFETTI_PROVIDER: EnvironmentProviders = provideAppInitializer(
+  loadScript()
+);
 // dont this in production
 export const CONFETTI_PROVIDER_X: Provider = {
   provide: CONFETTI_STANDALONE,

@@ -5,10 +5,9 @@ import { users } from './users';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 
 @Component({
-  selector: 'app-invoice',
-  standalone: true,
-  imports: [JsonPipe, NgxExtendedPdfViewerModule],
-  template: `
+    selector: 'app-invoice',
+    imports: [JsonPipe, NgxExtendedPdfViewerModule],
+    template: `
     @if( $user()){
     <h1>We got something!</h1>
     <code>{{ $user() | json }}</code>
@@ -18,7 +17,7 @@ import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
     } } @else {
     <h2>nothing posted in the message</h2>
     }
-  `,
+  `
 })
 export default class InvoiceComponent {
   c = createBroadCastChannel('invoice?');

@@ -2,11 +2,10 @@ import { JsonPipe } from '@angular/common';
 import { Component, computed, signal } from '@angular/core';
 
 @Component({
-  selector: 'app-vm-signal',
-  standalone: true,
-  imports: [JsonPipe],
-  templateUrl: './vm-signal.component.html',
-  styleUrl: './vm-signal.component.css',
+    selector: 'app-vm-signal',
+    imports: [JsonPipe],
+    templateUrl: './vm-signal.component.html',
+    styleUrl: './vm-signal.component.css'
 })
 export class VmSignalComponent {
   //#region no vm

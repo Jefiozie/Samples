@@ -332,11 +332,10 @@ export class NoopValueAccessorDirective<V>
   }
 }
 @Component({
-  selector: 'app-form-input',
-  standalone: true,
-  imports: [ReactiveFormsModule],
-  hostDirectives: [NoopValueAccessorDirective],
-  template: `<input type="text" [value]="ngControl!.value" />`,
+    selector: 'app-form-input',
+    imports: [ReactiveFormsModule],
+    hostDirectives: [NoopValueAccessorDirective],
+    template: `<input type="text" [value]="ngControl!.value" />`
 })
 export class FormFieldComponent<V> {
   ngControl = injectNgControl();
