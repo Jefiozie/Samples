@@ -1,0 +1,19 @@
+:host {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  background: var(--grape-0);
+  background-color: var(--red-5);
+  height: var(--size-xxl);
+}
+
+#left {
+  color: var(--green-1);
+  background-color: var(--green-9);
+  height: var(--size-xxl);
+}
+#right {
+  color: var(--blue-1);
+  background-color: var(--blue-9);
+  height: var(--size-xxl);
+}

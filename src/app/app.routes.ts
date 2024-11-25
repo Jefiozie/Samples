@@ -83,5 +83,10 @@ export const routes: Routes = [
         (c) => c.VmSignalComponent
       ),
   },
+  {
+    path: 'multiChild',
+    loadChildren: () =>
+      import('./multi-child/multi-child.routes').then((e) => e.routes),
+  },
   { path: '', redirectTo: 'disabled-elements', pathMatch: 'full' },
 ];
