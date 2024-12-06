@@ -2,6 +2,12 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
+    path: 'disabled',
+    loadComponent: () =>
+      import('./disable-host-directive/disable-host-directive.component'),
+    title: 'TITEL',
+  },
+  {
     path: 'disabled-elements',
     loadComponent: () =>
       import('./disabled-elements/disabled-elements.component'),

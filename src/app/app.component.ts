@@ -31,19 +31,19 @@ export class AppComponent {
       const button = document.getElementById('button') as HTMLButtonElement;
 
       //@ts-ignore-error
-      const jsConfetti = new JSConfetti({ canvas });
+      // const jsConfetti = new JSConfetti({ canvas });
 
-      setTimeout(() => {
-        jsConfetti.addConfetti({
-          confettiRadius: 12,
-          emojiSize: 100,
-          confettiNumber: 3000,
-        });
-      }, 800);
+      // setTimeout(() => {
+      //   jsConfetti.addConfetti({
+      //     confettiRadius: 12,
+      //     emojiSize: 100,
+      //     confettiNumber: 3000,
+      //   });
+      // }, 800);
 
-      button.addEventListener('click', () => {
-        jsConfetti.addConfetti();
-      });
+      // button.addEventListener('click', () => {
+      //   jsConfetti.addConfetti();
+      // });
       // ! FIXME: this should be changed
     }, 0);
   }

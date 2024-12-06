@@ -1,0 +1,5 @@
+app-card[disabled],
+[aria-disabled="true"],
+:disabled {
+  border: 1px red solid;
+}

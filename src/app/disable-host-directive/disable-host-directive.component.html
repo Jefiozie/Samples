@@ -1,0 +1,27 @@
+<p>disable-host-directive works!</p>
+<button [disabled]="disabled()">Disabled? {{ disabled() }}</button>
+<br />
+<br />
+<br />
+<app-card></app-card>
+<br />
+<br />
+<br />
+<label for="first">First</label>
+<input type="text" name="first" [disabled]="disabled()" />
+<br />
+<br />
+<br />
+
+<p>
+  Heat the oven to
+  <meter min="200" max="500" value="350" [ariaDisabled]="disabled()">
+    350 degrees</meter
+  >.
+</p>
+
+<br />
+<br />
+<br />
+<br />
+<appy-card [disabled]="disabled()"></appy-card>
