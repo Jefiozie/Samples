@@ -1,9 +1,8 @@
 import {
-    Component,
-    EventEmitter,
-    input,
-    NO_ERRORS_SCHEMA,
-    Output,
+  Component,
+  input,
+  NO_ERRORS_SCHEMA,
+  output
 } from '@angular/core';
 import { ReactComponentDirective } from './react.component.directive';
 type Post = { title: string; description: string; pictureLink: string };
@@ -25,5 +24,5 @@ type Post = { title: string; description: string; pictureLink: string };
 export class PostComponent {
   post = input<Post | undefined>(undefined);
   isSelected = input<boolean>(false);
-  @Output() selectPost = new EventEmitter<void>();
+  readonly selectPost = output<void>();
 }

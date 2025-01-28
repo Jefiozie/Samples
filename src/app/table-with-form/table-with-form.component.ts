@@ -1,5 +1,5 @@
-import { JsonPipe } from '@angular/common';
-import { Component, Input, ViewChild } from '@angular/core';
+
+import { Component, Input, viewChild } from '@angular/core';
 import {
   ControlContainer,
   FormsModule,
@@ -26,7 +26,7 @@ export class DetailsComponent {
 }
 @Component({
     selector: 'a',
-    imports: [DetailsComponent, FormsModule, JsonPipe],
+    imports: [DetailsComponent, FormsModule],
     template: ` <form>
         <fieldset>
           @for (item of items; track item; let i = $index) {
@@ -44,7 +44,7 @@ export class DetailsComponent {
       >`
 })
 export default class TableWithFormComponent {
-  @ViewChild(NgForm) form!: NgForm;
+  readonly form = viewChild.required(NgForm);
   items = [
     { text: 'hello', first: true, second: false },
     { text: 'second', first: false, second: true },

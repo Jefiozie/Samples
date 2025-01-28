@@ -1,4 +1,4 @@
-import { JsonPipe } from '@angular/common';
+
 import { Component, InputSignal, Signal, computed, input } from '@angular/core';
 export interface TableData {
   data: InputSignal<Array<any>>;
@@ -6,7 +6,7 @@ export interface TableData {
   $values: any;
 }
 @Component({
-    imports: [JsonPipe],
+    imports: [],
     template: `
     <table>
       <thead>

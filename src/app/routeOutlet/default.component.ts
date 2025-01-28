@@ -28,7 +28,7 @@ class DefaultComponent {
   a = this.financeService.getAll();
 }
 @Component({
-    imports: [RouterOutlet, JsonPipe],
+    imports: [JsonPipe],
     template: ` <h2>A component - {{ id() }}</h2>
     <code>
       {{ $item() | json }}
@@ -41,7 +41,7 @@ class AComponent {
   $item = computed(() => this.financeService.getById(this.id()));
 }
 @Component({
-    imports: [RouterOutlet, JsonPipe],
+    imports: [JsonPipe],
     template: ` <h2>B component - {{ id() }}</h2>
     <code>
       {{ $item() | json }}

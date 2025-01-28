@@ -65,7 +65,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 ];
 
 @Component({
-    imports: [MatTableComponent, JsonPipe, ADirective],
+    imports: [MatTableComponent, JsonPipe],
     template: `<h1>Table</h1>
     <app-mat-table />
 

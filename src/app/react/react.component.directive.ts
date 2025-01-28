@@ -1,10 +1,10 @@
 import {
   Directive,
   ElementRef,
-  Input,
   OnDestroy,
   OnInit,
   inject,
+  input
 } from '@angular/core';
 import React, { ComponentProps } from 'react';
 import { createRoot } from 'react-dom/client';
@@ -16,7 +16,7 @@ import {ReactPost} from './react-post';
 export class ReactComponentDirective<Comp extends React.ElementType>
   implements OnInit, OnDestroy
 {
-  @Input() props!: ComponentProps<Comp>;
+  readonly props = input.required<ComponentProps<Comp>>();
 
   private root = createRoot(inject(ElementRef).nativeElement);
 
@@ -25,7 +25,7 @@ export class ReactComponentDirective<Comp extends React.ElementType>
   }
 
   async initialize() {
-    this.root.render(React.createElement(ReactPost, this.props));
+    this.root.render(React.createElement(ReactPost, this.props()));
   }
 
   ngOnDestroy(): void {

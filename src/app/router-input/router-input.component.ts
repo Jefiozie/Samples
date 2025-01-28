@@ -1,4 +1,4 @@
-import { Component, Input as RouterInput } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 
 @Component({
@@ -8,6 +8,6 @@ import { Component, Input as RouterInput } from '@angular/core';
     styleUrl: './router-input.component.css'
 })
 export default class RouterInputComponent {
-  @RouterInput() id!: string;
-  @RouterInput() phone!: string;
+  readonly id = input.required<string>();
+  readonly phone = input.required<string>();
 }

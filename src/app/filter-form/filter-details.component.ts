@@ -1,4 +1,4 @@
-import { DatePipe, JsonPipe } from '@angular/common';
+import { DatePipe } from '@angular/common';
 import { Component, inject, input, Signal } from '@angular/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { isObservable, Observable, of, switchMap } from 'rxjs';
@@ -6,7 +6,7 @@ import { DataService } from '../shared/data.service';
 
 @Component({
     selector: 'detail',
-    imports: [DatePipe, JsonPipe],
+    imports: [DatePipe],
     template: `
     @if(user()){ @let users = user();
 

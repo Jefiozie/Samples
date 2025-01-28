@@ -2,7 +2,7 @@ import { afterRender, Component, inject } from '@angular/core';
 
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { routes } from './app.routes';
-import { SentenceCasePipe } from './pipes/sentenceCase.pipes';
+
 import { RenderComponentService } from './render-component.service';
 import { provideConfetti, CONFETTI_STANDALONE } from './utils/providerExample';
 interface A {
@@ -15,7 +15,7 @@ const x: A = {
 
 @Component({
     selector: 'app-root',
-    imports: [RouterOutlet, RouterLink, SentenceCasePipe],
+    imports: [RouterOutlet, RouterLink],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css']
 })

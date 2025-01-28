@@ -44,7 +44,7 @@ fdescribe('RouterInputComponent', () => {
       'router-input/1/4',
       RouterInputComponent
     );
-    expect(component.id).toBe('1');
-    expect(component.phone).toBe('4');
+    expect(component.id()).toBe('1');
+    expect(component.phone()).toBe('4');
   });
 });

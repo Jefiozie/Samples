@@ -1,4 +1,4 @@
-import { JsonPipe } from '@angular/common';
+
 import { Component, computed, inject, signal } from '@angular/core';
 import { DataService } from '../shared/data.service';
 import FilterComponent from './filter.component';
@@ -6,7 +6,7 @@ import DetailComponent from './filter-details.component';
 
 @Component({
     selector: 'app-filter-form',
-    imports: [JsonPipe, FilterComponent, DetailComponent],
+    imports: [FilterComponent, DetailComponent],
     template: `<p>filter-form works!</p>
     <filter [(birthDate)]="birthDate" [(userName)]="userName" />
     <detail [userId]="data()" /> `
